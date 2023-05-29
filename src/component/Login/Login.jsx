@@ -25,8 +25,8 @@ export default function Login(props) {
     async function sendDataRegister(value) {
         let {data} = await axios.post('https://precious-bass-tights.cyclic.app/auth/login',value).catch(
             (err)=>{
-                console.log(err.response.data.message);
-                setStatesError(`* ${err.response.data.messgae}`);
+                // console.log(err.response.data.message);
+                setStatesError(`* ${err.response.data.message}`);
             });
         // console.log(data);
         if (data.message == 'Done'){
